@@ -66,7 +66,7 @@ contract Launchpad is AccessControlEnumerable {
         if (allowance < tokenAmount) {
             revert tokenNotApproved(allowance);
         }
-        token.transfer(address(this), tokenAmount);
+        token.transferFrom(msg.sender, address(this), tokenAmount);
         uint256 balance = token.balanceOf(address(this));
         if (balance < tokenAmount) {
             revert tokenIncorrectAmount(balance);
