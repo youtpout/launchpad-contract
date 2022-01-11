@@ -1,3 +1,5 @@
 {
-    "solidity.compileUsingLocalVersion": "c:\\Users\\Eddy\\Source\\Repos\\bifrost-contract\\soljson-v0.8.11+commit.d7f03943.js"
+    "solidity.compileUsingLocalVersion": "c:\\Users\\Eddy\\Source\\Repos\\launchpad-contract\\soljson-v0.8.11+commit.d7f03943.js",
+    "solidity.compileUsingRemoteVersion": "latest",
+    "solidity.defaultCompiler": "localFile"
 }

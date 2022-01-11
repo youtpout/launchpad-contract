@@ -1,7 +1,9 @@
 require("@nomiclabs/hardhat-waffle");
 require("@nomiclabs/hardhat-web3");
 require("hardhat-abi-exporter");
+require("@nomiclabs/hardhat-etherscan");
 const { privateKey } = require("./secrets.json");
+const { apiBSCKey } = require("./secrets.json");
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -81,4 +83,8 @@ module.exports = {
     only: [],
     spacing: 2,
   },
+  etherscan:{
+    apiKey:apiBSCKey,
+  }
+  
 };

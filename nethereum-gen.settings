@@ -1,0 +1,7 @@
+{
+    "projectName": "LaunchpadContract",
+    "namespace": "LaunchpadContract.Contracts",
+    "lang": 0,
+    "autoCodeGen": true,
+    "projectPath": "../LaunchpadCSharp"
+}
