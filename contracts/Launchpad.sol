@@ -13,6 +13,7 @@ contract Launchpad is AccessControlEnumerable {
     error tokenIncorrectAmount(uint256);
     error notLaunched();
     error tooSoon();
+    error transferFailed();
 
     enum PresaleStatus {
         Creation,
@@ -62,15 +63,23 @@ contract Launchpad is AccessControlEnumerable {
         uint256 softCap,
         uint256 hardCap
     ) public {
-        uint256 allowance = token.allowance(msg.sender, address(this));
-        if (allowance < tokenAmount) {
-            revert tokenNotApproved(allowance);
-        }
-        token.transferFrom(msg.sender, address(this), tokenAmount);
-        uint256 balance = token.balanceOf(address(this));
-        if (balance < tokenAmount) {
-            revert tokenIncorrectAmount(balance);
-        }
+        // update for token with tax mechanism
+        // uint256 allowance = token.allowance(msg.sender, address(this));
+        // if (allowance < tokenAmount) {
+        //     revert tokenNotApproved(allowance);
+        // }
+        // bool transfer = token.transferFrom(
+        //     msg.sender,
+        //     address(this),
+        //     tokenAmount
+        // );
+        // if (!transfer) {
+        //     revert transferFailed();
+        // }
+        // uint256 balance = token.balanceOf(address(this));
+        // if (balance < tokenAmount) {
+        //     revert tokenIncorrectAmount(balance);
+        // }
         Presale memory newPresale;
         newPresale.id = presales.length;
         newPresale.tokenAddress = address(token);
