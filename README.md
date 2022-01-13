@@ -45,7 +45,6 @@ npx hardhat console --network localhost
 For Clean compile
 
 npx hardhat clean
-0xFd553404A262FEb94c08FCe4b086A212BA5F4efF
 
 Testnet contract address
 0xFd553404A262FEb94c08FCe4b086A212BA5F4efF
